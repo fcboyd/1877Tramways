@@ -1401,8 +1401,8 @@
             "values": [
                 {
                   "value": 20,
-                  "angle": 210,
-                  "percent": 0.8
+                  "angle": 45,
+                  "percent": 0.7
                 }
             ],
             "hexes": [
@@ -1445,7 +1445,7 @@
                 {
                   "value": 10,
                   "angle": 300,
-                  "percent": 0.6
+                  "percent": 0.7
                 }
             ],
             "labels": [
@@ -1496,7 +1496,7 @@
             "values": [
                 {
                   "value": 20,
-                  "angle": 180,
+                  "angle": 150,
                   "percent": 0.6
                 }
             ],
@@ -1654,7 +1654,7 @@
             "values": [
                 {
                   "value": 30,
-                  "angle": 320,
+                  "angle": 300,
                   "percent": 0.7
                 }
             ],
