@@ -1,0 +1,1670 @@
+{
+"info": {
+      "title": "1877",
+      "titleX": 50,
+      "titleY": 10,
+      "subtitle": "Stockholm Tramways",
+      "designer": "Love Brandefelt",
+      "publisher": "NA",
+      "background": "blue",
+      "orientation": "vertical",
+      "currency": "#kr"
+},
+"links": {
+    "bgg": "https://boardgamegeek.com/boardgame/358601/1877-stockholm-tramways",
+    "license": "",
+    "rules":"https://boardgamegeek.com/filepage/236903/official-rules"
+},
+"tokens": [
+    "Round"
+],
+"wip": true,
+"colors": {
+    "SF": "#4dbe25",
+    "SRJ": "#Daf308",
+    "TSSL": "#F38808",
+    "SSB": "#D23813",
+    "SSS": "#450b75",
+    "RF": "#336d33",
+    "LT": "#334b4c",
+    "D": "#071290",
+    "SNS": "#F36489",
+    "SST": "#568ad8",
+    "JSS": "#8a1022"
+  },
+"bank": "Unlimited",
+"players": [
+    {
+        "number": 3,
+        "certLimit": 16,
+        "capital": 600
+    },
+    {
+        "number": 4,
+        "certLimit": 12,
+        "capital": 450
+    },
+    {
+        "number": 5,
+        "certLimit": 10,
+        "capital": 360
+    },
+    {
+        "number": 6,
+        "certLimit": 9,
+        "capital": 300
+    }
+],
+"rounds": [
+    {
+        "name": "OR3",
+        "color": "brown"
+    },
+    {
+        "name": "OR2",
+        "color": "green"
+    },
+    {
+        "name": "OR1",
+        "color": "yellow"
+    },
+    {
+        "name": "SR",
+        "color": "grey"
+    }
+],
+"turns": [
+    {
+        "name": "Stock Round",
+        "steps": [
+            "Auction a company",
+            "Buy a share",
+            "Sell shares"
+        ],
+        "ordered": true
+    },
+    {
+        "name": "Operating Round",
+        "steps": [
+            "Acquire a company",
+            "Lay or upgrade track",
+            "Purchase a station",
+            "Run trains",
+            "Pay dividends or withhold revenue",
+            "Purchase trains",
+            "Acquire a company"
+        ],
+        "ordered": true
+    }
+],
+"stock": {
+    "type": "1D",
+    "par": {
+        "values": [
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+        ]
+    },
+    "market": [
+        35,
+        40,
+        45,
+        {
+          "value": 50,
+          "par": true
+        },
+        {
+            "value": 60,
+            "par": true
+        },
+        {
+            "value": 70,
+            "par": true
+        },
+        {
+            "value": 80,
+            "par": true
+        },
+        {
+            "value": 90,
+            "par": true
+        },
+        {
+            "value": 100,
+            "par": true
+        },
+        120,
+        140,
+        160,
+        180,
+        200,
+        240,
+        280,
+        320,
+        360,
+        {
+            "value": 400,
+            "color": "water"
+        }
+    ],
+    "legend": [
+        {
+            "color": "grey",
+            "description": "Par value",
+            "icon": "square"
+        },
+        {
+            "color": "water",
+            "description": "End game trigger",
+            "icon": "certificate"
+        }
+    ]
+},
+"trains": [
+    {
+        "name": "2H",
+        "quantity": 6,
+        "price": 80,
+        "rust": [
+            "4H"
+        ],
+        "color": "yellow"
+    },
+    {
+        "name": "3H",
+        "quantity": 5,
+        "price": 180,
+        "rust": [
+            "8H"
+        ],
+        "color": "green"
+    },
+    {
+        "name": "4H",
+        "quantity": 4,
+        "price": 280,
+        "rust": [
+            "10H"
+        ],
+        "color": "green"
+    },
+    {
+        "name": "6H",
+        "quantity": 2,
+        "price": 500,
+        "color": "brown"
+    },
+    {
+        "name": "8H",
+        "quantity": 2,
+        "price": 600,
+        "color": "brown"
+    },
+    {
+        "name": "10H",
+        "quantity": "∞",
+        "price": 700,
+        "color": "grey"
+    }
+],
+"tokenTypes": {
+    "default": [
+        "Free",
+        60,
+        60,
+        60,
+        60,
+        60
+    ]
+},
+"shareTypes": {
+    "default": [
+        {
+            "quantity": 1,
+            "label": "President's Certificate",
+            "percent": "20",
+            "shares": 2
+        },
+        {
+            "quantity": 8,
+            "percent": "10",
+            "shares": 1
+        }
+    ]
+},
+"floatPercent": 50,
+    "companies": [
+        {
+            "name": "AB Stockholms Spårvägar",
+            "abbrev": "SS",
+            "color": "grey",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "AB Södra Förstadsbanan",
+            "abbrev": "SF",
+            "color": "SF",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Stockholm-Rimbo Järnvägs AB",
+            "abbrev": "SRJ",
+            "color": "SRJ",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Trafik AB Stockholm-Södra Lidingön",
+            "abbrev": "TSSL",
+            "color": "TSSL",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Stockholms Södra Spårvägs AB",
+            "abbrev": "SSB",
+            "color": "SSB",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Stockholms Stads Spårväg",
+            "abbrev": "SSS",
+            "color": "SSS",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Råsunda Förstads AB",
+            "abbrev": "RF",
+            "color": "RF",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Lidingö Trafik AB",
+            "abbrev": "LT",
+            "color": "LT",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Djursholms AB",
+            "abbrev": "D",
+            "color": "D",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Stockholms Nya Spårvägs AB",
+            "abbrev": "SNS",
+            "color": "SNS",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Södra Spårvägarnes Trafik AB",
+            "abbrev": "SST",
+            "color": "SST",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        },
+        {
+            "name": "Järnvägs AB Stockholm-Saltsjön",
+            "abbrev": "JSS",
+            "color": "JSS",
+            "tokenType": "default",
+            "tokens": [
+                "Free",
+                60,
+                60,
+                60,
+                60,
+                60
+            ]
+        }
+    ],
+    "phases": [
+        {
+            "name": "2H",
+            "train": [
+                "2H"
+            ],
+            "limit": "4",
+            "notes": "",
+            "tiles": "yellow"
+        },
+        {
+            "name": "3H",
+            "train": [
+                "3H"
+            ],
+            "limit": "4",
+            "notes": "",
+            "tiles": "green"
+        },
+        {
+            "name": "4H",
+            "train": [
+                "4H"
+            ],
+            "limit": "4",
+            "notes": "",
+            "tiles": "green"
+        },
+        {
+            "name": "6H",
+            "train": [
+                "6H"
+            ],
+            "limit": "3",
+            "notes": "",
+            "tiles": "brown"
+        },
+        {
+            "name": "8H",
+            "train": [
+                "8H"
+            ],
+            "limit": "3",
+            "notes": "",
+            "tiles": "brown"
+        },
+        {
+            "name": "10H",
+            "train": [
+                "10H"
+            ],
+            "limit": "3",
+            "notes": "",
+            "tiles": "grey"
+        }
+    ],
+"tiles": {
+    "4": 2,
+    "6": 4,
+    "8": 4,
+    "9": 4,
+    "58": 3,
+    "19": 1,
+    "23": 1,
+    "24": 1,
+    "25": 1,
+    "141": 1,
+    "142": 1,
+    "144": 1,
+    "441": 2,
+    "442": 2,
+    "147": 2,
+    "448": 2,
+    "546": 1,
+    "X1": {
+        "quantity": 2,
+        "color": "yellow",
+        "cities": [
+            {
+                "size": 1
+            }
+        ],
+        "track": [
+            {
+                "type": "straight",
+                "side": 1,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 4,
+                "end": 0.5
+            }
+        ],
+        "values": [
+            {
+                "value": 20,
+                "angle": 210,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "C"
+            }
+        ]
+    },
+    "X2": {
+        "quantity": 2,
+        "color": "green",
+        "cities": [
+            {
+                "size": 2
+            }
+        ],
+        "track": [
+            {
+                "type": "straight",
+                "side": 1,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 2,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 4,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 5,
+                "end": 0.5
+            }
+        ],
+        "values": [
+            {
+                "value": 40,
+                "angle": 210,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "C"
+            }
+        ]
+    },
+    "X3": {
+        "color": "green",
+        "cities": [
+            {
+              "size": 1,
+              "y": -10,
+                "x": -30
+            },
+            {
+                "size": 1,
+                "y": -10,
+                "x": 30
+            }
+        ],
+        "track": [
+            {
+                "side": 1,
+                "type": "gentle"
+            },
+            {
+                "side": 5,
+                "type": "gentle"
+            }
+        ],
+        "values": [
+            {
+                "value": 40,
+                "angle": 150,
+                "percent": 0.8
+            },
+            {
+                "value": 40,
+                "angle": 210,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "L",
+                "angle": 45,
+                "percent": 0.7
+            }
+        ]
+    },
+    "X4": {
+        "color": "green",
+        "cities": [
+            {
+              "size": 1,
+              "y": 0,
+              "x": -50
+            },
+            {
+                "size": 2,
+                "y": -10,
+                "x": 30
+            }
+        ],
+        "track": [
+            {
+                "side": 2,
+                "type": "sharp"
+            },
+            {
+                "side": 5,
+                "type": "gentle"
+            }
+        ],
+        "values": [
+            {
+              "value": 50,
+              "angle": 310,
+              "percent": 0.8
+            },
+            {
+                "value": 50,
+                "angle": 150,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "N",
+                "angle": 30,
+                "percent": 0.7
+            }
+        ]
+    },
+    "X5": {
+        "quantity": 1,
+        "color": "green",
+        "cities": [
+            {
+                "size": 2
+            }
+        ],
+        "track": [
+            {
+                "type": "straight",
+                "side": 2,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 3,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 5,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 6,
+                "end": 0.5
+            }
+        ],
+        "values": [
+            {
+                "value": 30,
+                "angle": 210,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "S"
+            }
+        ]
+    },
+    "X6": {
+        "quantity": 1,
+        "color": "brown",
+        "cities": [
+            {
+                "size": 2
+            }
+        ],
+        "track": [
+            {
+                "type": "straight",
+                "side": 1,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 2,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 3,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 4,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 5,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 6,
+                "end": 0.5
+            }
+        ],
+        "values": [
+            {
+                "value": 60,
+                "angle": 210,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "C"
+            }
+        ]
+    },
+    "X7": {
+        "quantity": 1,
+        "color": "brown",
+        "cities": [
+            {
+                "size": 1
+            }
+        ],
+        "track": [
+            {
+                "type": "straight",
+                "side": 2,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 4,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 6,
+                "end": 0.5
+            }
+        ],
+        "values": [
+            {
+                "value": 50,
+                "angle": 210,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "L"
+            }
+        ]
+    },
+    "X8": {
+        "quantity": 1,
+        "color": "brown",
+        "cities": [
+            {
+                "size": 3
+            }
+        ],
+        "track": [
+            {
+                "type": "straight",
+                "side": 2,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 3,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 4,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 6,
+                "end": 0.5
+            }
+        ],
+        "values": [
+            {
+                "value": 80,
+                "angle": 210,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "N",
+                "angle": 90,
+                "percent": 0.8
+            }
+        ]
+    },
+    "X9": {
+        "color": "brown",
+        "cities": [
+            {
+              "size": 1,
+              "y": 0,
+              "x": -50
+            },
+            {
+                "size": 2,
+                "y": 15,
+                "x": 30
+            }
+        ],
+        "track": [
+            {
+                "side": 2,
+                "type": "sharp"
+            },
+            {
+                "side": 2,
+                "type": "gentle"
+            },
+            {
+                "side": 5,
+                "type": "gentle"
+            }
+        ],
+        "values": [
+            {
+              "value": 50,
+              "angle": 210,
+              "percent": 0.55
+            },
+            {
+                "value": 50,
+                "angle": 150,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "N",
+                "angle": 30,
+                "percent": 0.7
+            }
+        ]
+    },
+    "X10": {
+        "quantity": 1,
+        "color": "brown",
+        "cities": [
+            {
+                "size": 3
+            }
+        ],
+        "track": [
+            {
+                "type": "straight",
+                "side": 2,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 3,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 5,
+                "end": 0.5
+            },
+            {
+                "type": "straight",
+                "side": 6,
+                "end": 0.5
+            }
+        ],
+        "values": [
+            {
+                "value": 60,
+                "angle": 210,
+                "percent": 0.8
+            }
+        ],
+        "labels": [
+            {
+                "label": "S",
+                "angle": 90,
+                "percent": 0.7
+            }
+        ]
+    }
+},       
+"map": {   
+    "roundTracker": {
+        "type": "row",
+        "x": 780,
+        "y": 50
+    },
+    "hexes": [
+        {
+            "color": "plain",
+            "hexes": [
+                "E5",
+                "H6"
+            ]
+        },
+        {
+            "color": "plain",
+            "terrain": [
+                {
+                    "type": "river",
+                        "cost": 40
+                }
+            ],
+            "hexes": [
+                "B10",
+                "C9",
+                "D6",
+                "D8",
+                "D12",
+                "E3",
+                "E9",
+                "F10",
+                "G3",
+                "H10",
+                "H12",
+                "I11"
+            ]
+        },
+        {
+            "color": "plain",
+                "centerTowns": [
+                    {
+                        "name": {
+                            "name": "Rimbo",
+                            "reverse": true
+                        }
+                    }
+                ],
+            "hexes": [
+                "B8"
+            ]
+        },
+        {
+            "color": "plain",
+                "centerTowns": [
+                    {
+                        "name": {
+                            "name": "Kyrkviken",
+                            "reverse": true
+                        }
+                    }
+                ],
+            "hexes": [
+                "C11"
+            ] 
+        },
+        {
+            "color": "plain",
+                "centerTowns": [
+                    {
+                        "name": {
+                            "name": "Alvik",
+                            "reverse": true
+                    }
+                }
+            ],
+            "terrain": [
+                {
+                    "type": "river",
+                    "cost": 40,
+                    "angle": 360,
+                    "percent": 0.7
+                }
+            ],
+            "hexes": [
+                "F2"
+            ] 
+        },
+        {
+            "color": "plain",
+                "centerTowns": [
+                    {
+                        "name": {
+                            "name": "Liljeholmen",
+                            "reverse": true
+                    }
+                }
+            ],
+            "terrain": [
+                {
+                    "type": "river",
+                    "cost": 40,
+                    "angle": 360,
+                    "percent": 0.7
+                }
+            ],
+            "hexes": [
+                "G5"
+            ] 
+        },
+        {
+            "color": "plain",
+                "centerTowns": [
+                    {
+                        "name": {
+                            "name": "Sickla",
+                            "reverse": true
+                    }
+                }
+            ],
+            "terrain": [
+                {
+                    "type": "river",
+                    "cost": 40,
+                    "angle": 360,
+                    "percent": 0.7
+                }
+            ],
+            "hexes": [
+                "G9"
+            ] 
+        },
+        {
+            "color": "plain",
+                "centerTowns": [
+                    {
+                        "name": {
+                            "name": "Örby",
+                            "reverse": true
+                    }
+                }
+            ],
+            "hexes": [
+                "I5"
+            ] 
+        },
+        {
+            "color": "plain",
+                "centerTowns": [
+                    {
+                        "name": {
+                            "name": "Gubbängen",
+                            "reverse": true
+                    }
+                }
+            ],
+            "hexes": [
+                "I9"
+            ] 
+        },
+        {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Djursholm"
+                }
+              }
+            ],
+            "tokens": [
+                {
+                  "label": "D",
+                  "color": "D"
+                }
+            ],
+            "hexes": [
+              "C7"
+            ]
+          },
+          {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Sundbyberg"
+                }
+              }
+            ],
+            "hexes": [
+              "D2"
+            ]
+          },
+          {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Östermalm"
+                }
+              }
+            ],
+            "labels": [
+                {
+                    "label": "C"
+                }
+            ],
+            "hexes": [
+              "E7"
+            ]
+          },
+          {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Skärsätra"
+                }
+              }
+            ],
+            "hexes": [
+              "E11"
+            ]
+          },
+          {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Kungsholmen"
+                }
+              }
+            ],
+            "labels": [
+                {
+                    "label": "C"
+                }
+            ],
+            "terrain": [
+                {
+                    "type": "river",
+                    "cost": 40,
+                    "angle": 360,
+                    "percent": 0.7
+                }
+            ],
+            "hexes": [
+              "F4"
+            ]
+          },
+          {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Djurgården"
+                }
+              }
+            ],
+            "terrain": [
+                {
+                    "type": "river",
+                    "cost": 40,
+                    "angle": 360,
+                    "percent": 0.7
+                }
+            ],
+            "hexes": [
+              "F8"
+            ]
+          },
+          {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Saltsjö-Duvnäs"
+                }
+              }
+            ],
+            "hexes": [
+              "G11"
+            ]
+          },
+          {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Enskede"
+                }
+              }
+            ],
+            "tokens": [
+                {
+                  "label": "SST",
+                  "color": "SST"
+                }
+            ],
+            "hexes": [
+              "H8"
+            ]
+          },
+          {
+            "color": "plain",
+            "cities": [
+              {
+                "name": {
+                  "name": "Brännkyrka"
+                }
+              }
+            ],
+            "hexes": [
+              "I7"
+            ]
+          },
+          {
+            "color": "grey",
+            "cities": [
+              {
+                "name": {
+                  "name": "Norrtälje"
+                }
+              }
+            ],
+            "tokens": [
+                {
+                  "label": "SRJ",
+                  "color": "SRJ"
+                }
+            ],
+            "track": [
+                {
+                    "side": 5,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 6,
+                    "type": "straight",
+                    "end": 0.5
+                }
+            ],
+            "offBoardRevenue": {
+                "revenues": [
+                  {
+                    "color": "yellow",
+                    "cost": 40
+                  },
+                  {
+                    "color": "brown",
+                    "cost": 30
+                  }
+                ],
+                "angle": 180,
+                "percent": 0.7
+              },
+            "hexes": [
+              "A9"
+            ]
+          },
+          {
+            "color": "grey",
+            "cities": [
+              {
+                "name": {
+                  "name": "Ålsten",
+                "reverse": true
+                }
+              }
+            ],
+            "tokens": [
+                {
+                  "label": "SSS",
+                  "color": "SSS"
+                }
+            ],
+            "track": [
+                {
+                    "side": 3,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 4,
+                    "type": "straight",
+                    "end": 0.5
+                }
+            ],
+            "offBoardRevenue": {
+                "revenues": [
+                  {
+                    "color": "yellow",
+                    "cost": 10
+                  },
+                  {
+                    "color": "brown",
+                    "cost": 30
+                  }
+                ],
+                "rows": 2,
+                "angle": 90,
+                "percent": 0.6
+              },
+            "hexes": [
+              "G1"
+            ]
+          },
+          {
+            "color": "grey",
+            "cities": [
+              {
+                "name": {
+                  "name": "Saltsjöbaden",
+                  "reverse": true
+                }
+              }
+            ],
+            "tokens": [
+                {
+                  "label": "JSS",
+                  "color": "JSS"
+                }
+            ],
+            "track": [
+                {
+                    "side": 1,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 2,
+                    "type": "straight",
+                    "end": 0.5
+                }
+            ],
+            "offBoardRevenue": {
+                "revenues": [
+                  {
+                    "color": "yellow",
+                    "cost": 60
+                  },
+                  {
+                    "color": "brown",
+                    "cost": 40
+                  }
+                ],
+                "rows": 2,
+                "angle": 270,
+                "percent": 0.7
+              },
+            "hexes": [
+              "I13"
+            ]
+          },
+          {
+            "color": "yellow",
+            "cities": [
+              {
+                "name": {
+                  "name": "Råsunda"
+                }
+              }
+            ],
+            "tokens": [
+                {
+                  "label": "RF",
+                  "color": "RF"
+                }
+            ],
+            "track": [
+                {
+                    "side": 1,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 5,
+                    "type": "straight",
+                    "end": 0.5
+                }
+            ],
+            "values": [
+                {
+                  "value": 20,
+                  "angle": 210,
+                  "percent": 0.8
+                }
+            ],
+            "hexes": [
+              "D4"
+            ]
+          },
+          {
+            "color": "yellow",
+            "cities": [
+              {
+                "name": {
+                  "name": "Södermalm"
+                }
+              }
+            ],
+            "tokens": [
+                {
+                  "label": "SSB",
+                  "color": "SSB"
+                }
+            ],
+            "track": [
+                {
+                    "side": 1,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 4,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 5,
+                    "type": "straight",
+                    "end": 0.5
+                }
+            ],
+            "values": [
+                {
+                  "value": 10,
+                  "angle": 300,
+                  "percent": 0.6
+                }
+            ],
+            "labels": [
+                {
+                    "label": "S"
+                }
+            ],
+            "terrain": [
+                {
+                    "type": "river",
+                    "cost": 40,
+                    "angle": 45,
+                    "percent": 0.7
+                }
+            ],
+            "hexes": [
+              "G7"
+            ]
+          },
+          {
+            "color": "yellow",
+            "cities": [
+              {
+                "name": {
+                  "name": "Mälarhöjden",
+                  "reverse": true
+                }
+              }
+            ],
+            "tokens": [
+                {
+                  "label": "SF",
+                  "color": "SF"
+                }
+            ],
+            "track": [
+                {
+                    "side": 3,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 5,
+                    "type": "straight",
+                    "end": 0.5
+                }
+            ],
+            "values": [
+                {
+                  "value": 20,
+                  "angle": 180,
+                  "percent": 0.6
+                }
+            ],
+            "hexes": [
+              "H4"
+            ]
+          },
+          {
+            "color": "yellow",
+            "tokens": [
+                {
+                  "label": "LT",
+                  "color": "LT",
+                  "y": -30,
+                  "x": 15
+                },
+                {
+                    "label": "TSSL",
+                    "color": "TSSL",
+                    "y": 30,
+                    "x": 15
+                  }
+            ],
+            "track": [
+                {
+                    "side": 1,
+                    "type": "gentle"
+                },
+                {
+                    "side": 5,
+                    "type": "gentle"
+                }
+            ],
+            "values": [
+                {
+                  "value": 20,
+                  "angle": 150,
+                  "percent": 0.7
+                },
+                {
+                    "value": 20,
+                    "angle": 280,
+                    "percent": 0.7
+                }
+            ],
+            "labels": [
+                {
+                    "label": "L",
+                    "angle": 45,
+                    "percent": 0.7
+                }
+            ],
+            "hexes": [
+              "D10"
+            ]
+          },
+          {
+            "color": "yellow",
+            "tokens": [
+                {
+                  "label": "SNS",
+                  "color": "SNS",
+                  "y": -40,
+                  "x": 15
+                },
+                {
+                    "label": "SS",
+                    "color": "grey",
+                    "y": 20,
+                    "x": -15
+                  }
+            ],
+            "track": [
+                {
+                    "side": 2,
+                    "type": "sharp"
+                },
+                {
+                    "side": 5,
+                    "type": "gentle",
+                    "start": 0.5,
+                    "end": 1
+                }
+            ],
+            "values": [
+                {
+                  "value": 30,
+                  "angle": 340,
+                  "percent": 0.7
+                },
+                {
+                    "value": 30,
+                    "angle": 250,
+                    "percent": 0.8
+                }
+            ],
+            "labels": [
+                {
+                    "label": "N",
+                    "angle": 125,
+                    "percent": 0.7
+                }
+            ],
+            "terrain": [
+                {
+                    "type": "river",
+                    "cost": 40,
+                    "angle": 295,
+                    "percent": 0.7
+                }
+            ],
+            "hexes": [
+              "F6"
+            ]
+          },
+          {
+              "color": "grey",
+              "track": [
+                  {
+                      "side": 5,
+                      "type": "sharp"
+                  }
+              ],
+              "hexes": [
+                  "C3"
+              ]
+          },
+          {
+            "color": "grey",
+            "centerTowns": [
+                {
+                    "name": {
+                        "name": "Ulvsunda",
+                        "reverse": true
+                    }
+                }
+            ],
+            "track": [
+                {
+                    "side": 3,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 4,
+                    "type": "straight",
+                    "end": 0.5
+                },
+                {
+                    "side": 5,
+                    "type": "straight",
+                    "end": 0.5
+                }
+            ],
+            "values": [
+                {
+                  "value": 30,
+                  "angle": 320,
+                  "percent": 0.7
+                }
+            ],
+            "hexes": [
+                "E1"
+            ]
+        }
+    ]
+},
+"id": "1977",
+"slug": "1977"
+}
+                    
